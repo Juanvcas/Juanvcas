@@ -1,0 +1,52 @@
+.mainButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24rem;
+	height: 5rem;
+	color: var(--fontLight);
+	font-size: var(--font-size);
+	font-weight: 700;
+	background: var(--colorSecond);
+	border-radius: var(--border-radius);
+	border: none;
+	cursor: pointer;
+}
+
+.mainButton:hover {
+	backdrop-filter: brightness(60%);
+	/* background-color: black; */
+}
+
+.mainLinkButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24rem;
+	height: 5rem;
+	color: var(--fontLight);
+	font-size: var(--font-size);
+	font-weight: 700;
+	text-decoration: none;
+	background: var(--colorSecond);
+	border-radius: var(--border-radius);
+	border: none;
+	cursor: pointer;
+}
+
+.mainLinkButton:hover {
+	background-color: var(--colorSecondS);
+	transition: all 0.3s;
+}
+
+.mainLinkButton svg {
+	display: none;
+	width: 2.8rem;
+	height: 2.8rem;
+	margin-left: 1rem;
+	color: var(--fontLight);
+}
+
+.mainLinkButton:hover svg {
+	display: block;
+}
