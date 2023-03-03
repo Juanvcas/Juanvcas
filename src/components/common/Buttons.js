@@ -12,7 +12,7 @@ export const MainLinkButton = (props) => {
 			className={s.mainLinkButton}
 			href={props.href}
 			title={props.title}
-			target={props.target}
+			target={props.target || '_self'}
 		>
 			{props.text}
 			<FiArrowRight />

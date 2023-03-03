@@ -1,4 +1,5 @@
 import { Header } from '@/components/global/Header';
+import { Footer } from '@/components/global/Footer';
 import Head from 'next/head';
 
 const MainTemplate = ({ children }) => {
@@ -11,6 +12,7 @@ const MainTemplate = ({ children }) => {
 			<>
 				<Header />
 				{children}
+				<Footer />
 			</>
 		</>
 	);

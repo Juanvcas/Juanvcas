@@ -1,7 +1,8 @@
 :root {
 	--width: 90%;
 	--max-width: 1100px;
-	--border-radius: 0.2rem;
+	--paddingY: 6rem;
+	--border-radius: 0.4rem;
 
 	--font-family: 'Roboto Condensed', sans-serif;
 
@@ -14,6 +15,7 @@
 
 	--fontMain: #000814;
 	--fontSecond: #2b2d42;
+	--fontSecondL: #40425c;
 	--fontLight: #e5e5e5;
 
 	--font-h1: 4.2rem;
@@ -34,8 +36,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: var(--font-family);
-	color: var(--fontMain);
-	transition: all 0.3s;
+	/* color: var(--fontMain); */
 }
 
 html {
@@ -54,17 +55,36 @@ h1 {
 
 h2 {
 	font-size: var(--font-h2);
+	font-weight: 400;
+	letter-spacing: 1rem;
 }
 
 h3 {
 	font-size: var(--font-h3);
 }
 
+img {
+	z-index: 0;
+}
+
 .display-limit {
 	width: var(--width);
 	max-width: var(--max-width);
-	height: auto;
 	margin: 0 auto;
+}
+
+.separator,
+.separator2 {
+	display: block;
+	width: 90%;
+	max-width: var(--max-width);
+	height: 0.1rem;
+	margin: 0 auto;
+	background-color: var(--colorThirdS);
+}
+
+.separator2 {
+	background-color: var(--fontMain);
 }
 
 /* @media (prefers-color-scheme: dark) {

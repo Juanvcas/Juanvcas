@@ -1,0 +1,25 @@
+.main {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: auto;
+	margin-top: 4rem;
+	list-style: none;
+	cursor: default;
+}
+
+.main li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+	font-size: var(--font-h3);
+	font-weight: 300;
+}
+
+.main li svg {
+	width: 4rem;
+	height: 4rem;
+}

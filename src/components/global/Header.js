@@ -7,7 +7,7 @@ export const Header = () => {
 		<header className={s.main}>
 			<section className={`${s['main-cont']} display-limit`}>
 				<div className={s.main_logo}>
-					<p>Juanvcas</p>
+					<p>Juanvcas_</p>
 				</div>
 				<MainNav style={s.main_nav} />
 				<menu className={s.main_menu}>
