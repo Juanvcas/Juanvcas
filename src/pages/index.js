@@ -97,7 +97,11 @@ export default function Home() {
 						<p>Aquí puedes encontrar los ultimos proyectos que realicé</p>
 					</div>
 					<ProjectsList style={s.projects_list} />
-					<MainLinkButton href={'/'} title={'Proyectos'} text={'Ver Todos'} />
+					<MainLinkButton
+						href={'/portfolio'}
+						title={'Proyectos'}
+						text={'Ver Todos'}
+					/>
 				</section>
 				<span className={'separator2'}></span>
 				<section className={`${s.main_contact} display-limit`}>

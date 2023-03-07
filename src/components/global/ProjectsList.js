@@ -1,35 +1,22 @@
+import { useEffect, useState } from 'react';
+import { useFetch } from '@/hooks/useFectch';
 import { ProjectSlide } from './ProjectSlide';
 
-const temporalList = [
-	{
-		title: 'Magenta Accesorios',
-		description: 'Tienda onlide de una pequeña empresa de accesorios',
-		category: 'E-commerce',
-		image: 'https://picsum.photos/600/600',
-	},
-	{
-		title: 'Magenta Accesorios',
-		description: 'Tienda onlide de una pequeña empresa de accesorios',
-		category: 'E-commerce',
-		image: 'https://picsum.photos/600/600',
-	},
-	{
-		title: 'Magenta Accesorios',
-		description: 'Tienda onlide de una pequeña empresa de accesorios',
-		category: 'E-commerce',
-		image: 'https://picsum.photos/600/600',
-	},
-];
-
 export const ProjectsList = ({ list, style }) => {
+	const [projects, setProjects] = useState([]);
+	useFetch(`${process.env.NEXT_PUBLIC_API}/api/projects`, setProjects);
+	useEffect(() => {
+		console.log(projects);
+	}, [projects]);
 	return (
 		<div className={style}>
-			{temporalList.map((project) => (
+			{projects.map((project) => (
 				<ProjectSlide
+					key={project.id}
 					title={project.title}
-					description={project.description}
-					category={project.category}
-					image={project.image}
+					description={project.short_description}
+					category={project.category.title}
+					images={project.images}
 				/>
 			))}
 		</div>

@@ -5,7 +5,7 @@ export const MainNav = ({ style }) => {
 		<nav className={style}>
 			<ul>
 				<li>
-					<Link href={'/'}>Portafolio</Link>
+					<Link href={'/portfolio'}>Portafolio</Link>
 				</li>
 				<li>
 					<Link href={'/'}>CV</Link>

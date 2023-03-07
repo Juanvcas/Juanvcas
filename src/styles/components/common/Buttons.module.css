@@ -50,3 +50,23 @@
 .mainLinkButton:hover svg {
 	display: block;
 }
+
+.inputButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24rem;
+	height: 5rem;
+	color: var(--fontLight);
+	font-size: var(--font-size);
+	font-weight: 700;
+	background: var(--colorSecond);
+	border-radius: var(--border-radius);
+	border: none;
+	cursor: pointer;
+}
+
+.inputButton:hover {
+	backdrop-filter: brightness(60%);
+	/* background-color: black; */
+}

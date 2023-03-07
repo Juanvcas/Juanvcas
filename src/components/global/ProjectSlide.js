@@ -7,7 +7,7 @@ export const ProjectSlide = (props) => {
 		<div className={s.main}>
 			<div className={s['image-cont']}>
 				<figure className={s.main_image}>
-					<Image src={props.image} alt={props.title} fill />
+					{/* <Image src={props.images[0]} alt={props.title} fill /> */}
 				</figure>
 			</div>
 			<div className={s.main_desc}>

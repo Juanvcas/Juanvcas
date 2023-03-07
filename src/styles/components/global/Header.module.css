@@ -13,8 +13,10 @@
 	height: 100%;
 }
 
-.main_logo {
+.main_logo a {
+	color: var(--fontMain);
 	font-size: var(--font-h3);
+	text-decoration: none;
 }
 
 .main_nav {
