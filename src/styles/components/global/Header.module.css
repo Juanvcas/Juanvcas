@@ -52,6 +52,11 @@
 	background-color: var(--colorThird);
 }
 
+.main_nav li a svg {
+	width: 4rem;
+	height: 4rem;
+}
+
 .main_menu {
 	display: none;
 }

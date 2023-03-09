@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { DiGithubBadge } from 'react-icons/di';
 
 export const MainNav = ({ style }) => {
 	return (
@@ -12,6 +13,11 @@ export const MainNav = ({ style }) => {
 				</li>
 				<li>
 					<Link href={'/'}>Contácto</Link>
+				</li>
+				<li>
+					<Link href={'https://github.com/Juanvcas'} target={'_blank'}>
+						<DiGithubBadge />
+					</Link>
 				</li>
 			</ul>
 		</nav>

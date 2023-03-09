@@ -24,6 +24,7 @@
 	--font-size: 1.8rem;
 
 	--background: #ffffff;
+	--background-alpha: #000814a0;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -96,7 +96,7 @@ export default function Home() {
 						<Subtitle style={s.projects_title} text={'MIS PROYECTOS'} />
 						<p>Aquí puedes encontrar los ultimos proyectos que realicé</p>
 					</div>
-					<ProjectsList style={s.projects_list} />
+					<ProjectsList style={s.projects_list} limit={3} />
 					<MainLinkButton
 						href={'/portfolio'}
 						title={'Proyectos'}

@@ -1,8 +1,12 @@
+import { useContext } from 'react';
+import Head from 'next/head';
+import { AppContext } from '@/context/AppContext';
 import { Header } from '@/components/global/Header';
 import { Footer } from '@/components/global/Footer';
-import Head from 'next/head';
+import { ProjectModal } from '@/components/modals/ProjectModal';
 
 const MainTemplate = ({ children }) => {
+	const { projectModal, setProjecModal } = useContext(AppContext);
 	return (
 		<>
 			<Head>
@@ -13,6 +17,7 @@ const MainTemplate = ({ children }) => {
 				<Header />
 				{children}
 				<Footer />
+				{projectModal && <ProjectModal />}
 			</>
 		</>
 	);

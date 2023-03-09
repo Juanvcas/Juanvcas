@@ -35,9 +35,9 @@ export default function Portfolio() {
 					</div>
 				</section>
 				<span className={'separator2'}></span>
-				<section className={`${s.main_filters} display-limit`}>
+				{/* <section className={`${s.main_filters} display-limit`}>
 					<Filters s={s} />
-				</section>
+				</section> */}
 				<section className={`${s.main_projects} display-limit`}>
 					<ProjectsList style={s.projects_list} />
 				</section>

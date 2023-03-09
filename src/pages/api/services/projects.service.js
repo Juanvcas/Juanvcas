@@ -25,6 +25,12 @@ class ProjectsService {
 			return result;
 		}
 	}
+
+	async limit(query) {
+		console.log(query);
+		const list = this.projects.slice(0, parseInt(query));
+		return list;
+	}
 }
 
 export { ProjectsService };
