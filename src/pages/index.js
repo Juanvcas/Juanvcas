@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { MainLinkButton } from '@/components/common/Buttons';
-import { TechSlider } from '@/components/Home/TechSlider';
-import { ServiceSlide } from '@/components/Home/ServiceSlide';
+import { TechSlider } from '@/components/pages/Home/TechSlider';
+import { ServiceSlide } from '@/components/pages/Home/ServiceSlide';
 import { ProjectsList } from '@/components/global/ProjectsList';
 import { SlChemistry, SlRocket, SlWrench } from 'react-icons/sl';
 import s from '@/styles/Home.module.css';

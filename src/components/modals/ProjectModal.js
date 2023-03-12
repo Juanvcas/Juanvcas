@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useContext, useState } from 'react';
 import { AppContext } from '@/context/AppContext';
 import { MainLinkButton } from '../common/Buttons';
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { FiChevronRight, FiChevronLeft, FiX } from 'react-icons/fi';
 import s from '@/styles/components/modals/ProjectModal.module.css';
 
 export const ProjectModal = () => {
@@ -19,6 +19,7 @@ export const ProjectModal = () => {
 	return (
 		<aside className={s['main-cont']} onClick={() => setProjectModal(false)}>
 			<div className={s.main} onClick={(e) => e.stopPropagation()}>
+				<FiX onClick={() => setProjectModal(false)} />
 				<section className={s.main_content}>
 					<figure className={s.content_image}>
 						<span onClick={previus}>
@@ -44,20 +45,26 @@ export const ProjectModal = () => {
 					</div>
 				</section>
 				<section className={s.main_info}>
-					<h3>Descripción corta:</h3>
-					<p>{project.short_description}</p>
-					<h3>Tecnoligías:</h3>
-					{project.technologies.map((tech) => (
-						<p>{tech.title}</p>
-					))}
-					<h3>Repositorio:</h3>
-					<p>Hosting: {project.repository.hosting}</p>
-					<MainLinkButton
-						href={project.repository.url}
-						title={'GitHub'}
-						text={'Ir al link'}
-						target={'_blank'}
-					/>
+					<div>
+						<h3>Descripción corta:</h3>
+						<p>{project.short_description}</p>
+					</div>
+					<div>
+						<h3>Tecnoligías:</h3>
+						{project.technologies.map((tech) => (
+							<p>{tech.title}</p>
+						))}
+					</div>
+					<div>
+						<h3>Repositorio:</h3>
+						<p>Hosting: {project.repository.hosting}</p>
+						<MainLinkButton
+							href={project.repository.url}
+							title={'GitHub'}
+							text={'Ir al link'}
+							target={'_blank'}
+						/>
+					</div>
 				</section>
 			</div>
 		</aside>

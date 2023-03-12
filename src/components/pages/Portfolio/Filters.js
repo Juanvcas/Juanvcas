@@ -1,4 +1,4 @@
-import { InputButton } from '../common/Buttons';
+import { InputButton } from '../../common/Buttons';
 
 export const Filters = ({ s }) => {
 	return (

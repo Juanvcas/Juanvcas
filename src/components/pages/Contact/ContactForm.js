@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
-import { MainButton } from '../common/Buttons';
+import { MainButton } from '../../common/Buttons';
 import { SlClose, SlCheck } from 'react-icons/sl';
-import { MessageModal } from '../modals/MessageModal';
+import { MessageModal } from '../../modals/MessageModal';
 
 export const ContactForm = ({ s }) => {
 	const [message, setMessage] = useState(false);
@@ -57,7 +57,7 @@ export const ContactForm = ({ s }) => {
 				</label>
 				<label htmlFor='message'>
 					<span>Mensaje:</span>
-					<input type={'text'} name={'message'} id={'message'} required />
+					<textarea name={'message'} id={'message'} required />
 				</label>
 				<MainButton type={'submit'} text={'Enviar'} />
 			</form>

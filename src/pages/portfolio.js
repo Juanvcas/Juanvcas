@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { Filters } from '@/components/Portfolio/Filters';
+import { Filters } from '@/components/pages/Portfolio/Filters';
 import s from '@/styles/Portfolio.module.css';
 import { ProjectsList } from '@/components/global/ProjectsList';
 

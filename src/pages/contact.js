@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { ContactForm } from '@/components/Contact/ContactForm';
+import { ContactForm } from '@/components/pages/Contact/ContactForm';
 import s from '@/styles/Contact.module.css';
 
 export default function Contact() {

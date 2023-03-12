@@ -78,3 +78,21 @@
 	width: 100%;
 	height: auto;
 }
+
+@media (max-width: 768px) {
+	.projects_list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.banner_image {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	.projects_list {
+		grid-template-columns: 1fr;
+	}
+}

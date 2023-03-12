@@ -45,13 +45,14 @@
 	font-size: var(--font-h2);
 }
 
-.form label input {
+.form label input,
+.form label textarea {
 	padding: 1rem;
 	font-size: var(--font-size);
 	border-radius: var(--border-radius);
 }
 
-.form label:nth-child(3) input {
+.form label textarea {
 	height: 20rem;
 }
 
@@ -67,4 +68,14 @@
 	margin-top: 4rem;
 	padding: 2rem;
 	color: var(--fontLight);
+}
+
+@media (max-width: 480px) {
+	.form label {
+		width: 100%;
+		padding-top: 2rem;
+	}
+	.form label:first-child {
+		padding-top: none;
+	}
 }

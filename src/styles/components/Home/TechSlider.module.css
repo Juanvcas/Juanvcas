@@ -23,3 +23,9 @@
 	width: 4rem;
 	height: 4rem;
 }
+
+@media (max-width: 768px) {
+	.main li {
+		margin-top: 2rem;
+	}
+}
