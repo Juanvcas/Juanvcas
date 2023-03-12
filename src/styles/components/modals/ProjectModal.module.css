@@ -28,11 +28,34 @@
 }
 
 .content_image {
+	position: relative;
 	width: 100%;
 	height: 30rem;
 	padding: 2rem 2rem 0;
 	background-color: var(--colorThird);
 	border-radius: var(--border-radius);
+}
+
+.content_image span {
+	position: absolute;
+	top: calc(50% - 2rem);
+	width: 4rem;
+	height: 4rem;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.content_image span:nth-child(1) {
+	left: 0;
+}
+
+.content_image span:nth-child(2) {
+	right: 0;
+}
+
+.content_image span svg {
+	width: 100%;
+	height: 100%;
 }
 
 .image-cont {
@@ -45,6 +68,7 @@
 	object-fit: cover;
 	object-position: top;
 	aspect-ratio: 1;
+	z-index: 0;
 }
 
 .content_info {

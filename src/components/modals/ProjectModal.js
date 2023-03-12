@@ -2,19 +2,38 @@ import Image from 'next/image';
 import { useContext, useState } from 'react';
 import { AppContext } from '@/context/AppContext';
 import { MainLinkButton } from '../common/Buttons';
+import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import s from '@/styles/components/modals/ProjectModal.module.css';
 
 export const ProjectModal = () => {
 	const { setProjectModal, projectModalValue } = useContext(AppContext);
 	const [project] = useState(projectModalValue);
+
+	const [current, setCurrent] = useState(0);
+	const next = () => {
+		setCurrent(current === project.images.length - 1 ? 0 : current + 1);
+	};
+	const previus = () => {
+		setCurrent(current === 0 ? project.images.length - 1 : current - 1);
+	};
 	return (
 		<aside className={s['main-cont']} onClick={() => setProjectModal(false)}>
 			<div className={s.main} onClick={(e) => e.stopPropagation()}>
 				<section className={s.main_content}>
 					<figure className={s.content_image}>
+						<span onClick={previus}>
+							<FiChevronLeft />
+						</span>
+						<span onClick={next}>
+							<FiChevronRight />
+						</span>
 						<div className={s['image-cont']}>
-							{project.images.map((img) => (
-								<Image src={img} alt={project.title} fill />
+							{project.images.map((img, index) => (
+								<>
+									{index === current && (
+										<Image key={index} src={img} alt={project.title} fill />
+									)}
+								</>
 							))}
 						</div>
 					</figure>

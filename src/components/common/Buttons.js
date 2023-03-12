@@ -4,7 +4,9 @@ import s from '@/styles/components/common/Buttons.module.css';
 
 export const MainButton = (props) => {
 	return (
-		<button className={`${s.mainButton} ${props.style}`}>{props.text}</button>
+		<button type={!!props.type} className={`${s.mainButton} ${props.style}`}>
+			{props.text}
+		</button>
 	);
 };
 

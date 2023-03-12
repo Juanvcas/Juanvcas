@@ -31,7 +31,11 @@ export default function Home() {
 							dashboards y soluciones empresariales con <b>React.js</b> y{' '}
 							<b>Next.js</b>
 						</h3>
-						<MainLinkButton href={'/'} title={'Contácto'} text={'Contáctame'} />
+						<MainLinkButton
+							href={'/contact'}
+							title={'Contácto'}
+							text={'Contáctame'}
+						/>
 					</div>
 					<div className={s.hero_image}>
 						<figure className={s['image-cont']}>
@@ -115,7 +119,7 @@ export default function Home() {
 								mejor mi oferta.
 							</p>
 							<MainLinkButton
-								href={'/'}
+								href={'/contact'}
 								title={'Contácto'}
 								text={'Contáctame'}
 							/>

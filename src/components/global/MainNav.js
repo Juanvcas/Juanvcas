@@ -12,7 +12,7 @@ export const MainNav = ({ style }) => {
 					<Link href={'/'}>CV</Link>
 				</li>
 				<li>
-					<Link href={'/'}>Contácto</Link>
+					<Link href={'/contact'}>Contácto</Link>
 				</li>
 				<li>
 					<Link href={'https://github.com/Juanvcas'} target={'_blank'}>
