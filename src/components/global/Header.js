@@ -72,7 +72,7 @@ export const Header = () => {
 					)}
 					<div className={s.main_lang} onClick={() => changeLanguage(i18n)}>
 						<SlGlobe />
-						{lang.length > 0 && lang.toUpperCase()}
+						{lang && lang.toUpperCase()}
 					</div>
 				</div>
 			</section>
