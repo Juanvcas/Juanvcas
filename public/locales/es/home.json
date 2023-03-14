@@ -1,0 +1,21 @@
+{
+	"heroTitle": "Hola, soy",
+	"heroText": "Especializado en creación de aplicaciones web y soluciones empresariales con React.js y Next.js",
+	"techTitle": "TEACNOLIGÍAS",
+	"servicesTitle": "LOS SERVICIOS QUE OFRESCO",
+	"servicesText": "Creación de aplicaciones web SPA para soluciones empresariales, ecommerce, dashboards, porfatolios de marca personal o empresarial y mas. Diseño, desarrollo e implementación utilizando tecnologías top de la industria",
+	"slideTitle1": "DISEÑO",
+	"slideText1": "Diseño UX y estructuración de aplicaciones web",
+	"slideTitle2": "DESARROLLO",
+	"slideText2": "Desarrollo enfocado al rendimiento y la velocidad de carga",
+	"slideTitle3": "SOPORTE",
+	"slideText3": "Actualización continua de la aplicación, API y bases de datos",
+	"projectsTitle": "MIS PROYECTOS",
+	"projectsText": "Aquí puedes encontrar los ultimos proyectos que realicé",
+	"contactTitle": "CONTÁCTAME",
+	"contactText": "Puedes escribirme y para responder totas tus dudas y conocer mejor mi oferta",
+	"contactButton": "Contáctame",
+	"contactButtonTitle": "Contácto",
+	"projectsButton": "Ver todos",
+	"projectsButtonTitle": "Proyectos"
+}

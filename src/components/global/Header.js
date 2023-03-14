@@ -1,12 +1,30 @@
 import Link from 'next/link';
+import { useContext, useEffect, useState } from 'react';
+import { AppContext } from '@/context/AppContext';
+import { useTranslation } from 'react-i18next';
 import { MainNav } from './MainNav';
 import { FiMenu } from 'react-icons/fi';
+import { SlGlobe } from 'react-icons/sl';
 import s from '@/styles/components/global/Header.module.css';
-import { useEffect, useState } from 'react';
 
 export const Header = () => {
 	const [nav, setNav] = useState(true);
 	const [button, setButton] = useState(false);
+	const { lang, setLang } = useContext(AppContext);
+
+	const { i18n } = useTranslation();
+
+	const changeLanguage = (i18n) => {
+		if (i18n.language === 'es') {
+			i18n.changeLanguage('en');
+			window.localStorage.setItem('P-JV_LANG', 'en');
+			setLang('en');
+		} else {
+			i18n.changeLanguage('es');
+			window.localStorage.setItem('P-JV_LANG', 'es');
+			setLang('es');
+		}
+	};
 
 	const handlerNav = (e) => {
 		setNav(!nav);
@@ -44,12 +62,18 @@ export const Header = () => {
 				<div className={s.main_logo}>
 					<Link href={'/'}>Juanvcas_</Link>
 				</div>
-				{nav && <MainNav style={s.main_nav} />}
-				{button && (
-					<menu className={s.main_menu} onClick={handlerNav}>
-						<FiMenu />
-					</menu>
-				)}
+				<div className={s['nav-cont']}>
+					{nav && <MainNav style={s.main_nav} />}
+					{button && (
+						<menu className={s.main_menu} onClick={handlerNav}>
+							<FiMenu />
+						</menu>
+					)}
+					<div className={s.main_lang} onClick={() => changeLanguage(i18n)}>
+						<SlGlobe />
+						{lang.toUpperCase()}
+					</div>
+				</div>
 			</section>
 		</header>
 	);

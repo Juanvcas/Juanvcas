@@ -1,0 +1,21 @@
+{
+	"heroTitle": "Hi, i'm",
+	"heroText": "Specialized in creating web applications and enterprise solutions using React.js and Next.js",
+	"techTitle": "TECHNOLOGIES",
+	"servicesTitle": "THE SERVICES I OFFER",
+	"servicesText": "Creation of single-page web applications for enterprise solutions, ecommerce, dashboards, personal or business brand portfolios, and more. Design, development, and implementation using top industry technologies",
+	"slideTitle1": "DESIGN",
+	"slideText1": "UX design and structuring of web applications",
+	"slideTitle2": "DEVELOPMENT",
+	"slideText2": "Performance and load speed focused development",
+	"slideTitle3": "SUPPORT",
+	"slideText3": "Continuous updating of the application, API, and databases",
+	"projectsTitle": "MY PROJECTS",
+	"projectsText": "Here you can find the latest projects I have worked on",
+	"contactTitle": "CONTACT ME",
+	"contactText": "You can write to me to have all your doubts answered and get a better understanding of my offer",
+	"contactButton": "Contact me",
+	"contactButtonTitle": "Contact",
+	"projectsButton": "See all",
+	"projectsButtonTitle": "Projects"
+}

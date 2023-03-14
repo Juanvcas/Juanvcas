@@ -1,0 +1,9 @@
+{
+	"title": "Contácto",
+	"titleText": "Escríbeme si tienes algun proyecto en mente o quieras contactar conmigo",
+	"formName": "Nombre",
+	"formEmail": "Email",
+	"formMessage": "Mensaje",
+	"response": "!El mensaje fue enviado exitosamente!",
+	"responseError": "Hubo un error al intentar enviar el mensaje, intentalo de nuevo mas tarde."
+}

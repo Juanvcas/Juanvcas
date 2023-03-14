@@ -1,9 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import { useRef, useState } from 'react';
 import { MainButton } from '../../common/Buttons';
 import { SlClose, SlCheck } from 'react-icons/sl';
 import { MessageModal } from '../../modals/MessageModal';
 
 export const ContactForm = ({ s }) => {
+	const { t } = useTranslation('contact');
+
 	const [message, setMessage] = useState(false);
 	const form = useRef();
 
@@ -27,19 +30,19 @@ export const ContactForm = ({ s }) => {
 				if (res.status === 200) {
 					setMessage({
 						error: false,
-						text: '¡El mensaje fue enviado exitosamente!',
+						text: t('response'),
 					});
 				} else {
 					setMessage({
 						error: true,
-						text: 'Hubo un error al intentar enviar el mensaje.',
+						text: t('responseError'),
 					});
 				}
 			})
 			.catch((err) =>
 				setMessage({
 					error: true,
-					text: 'Hubo un error al intentar enviar el mensaje.',
+					text: t('responseError'),
 				})
 			);
 	};
@@ -48,15 +51,15 @@ export const ContactForm = ({ s }) => {
 		<>
 			<form ref={form} className={s.form} onSubmit={handlerSubmit}>
 				<label htmlFor='name'>
-					<span>Nombre:</span>
+					<span>{t('formName')}:</span>
 					<input type={'text'} name={'name'} id={'name'} required />
 				</label>
 				<label htmlFor='email'>
-					<span>Email:</span>
+					<span>{t('formEmail')}:</span>
 					<input type={'email'} name={'email'} id={'email'} required />
 				</label>
 				<label htmlFor='message'>
-					<span>Mensaje:</span>
+					<span>{t('formMessage')}:</span>
 					<textarea name={'message'} id={'message'} required />
 				</label>
 				<MainButton type={'submit'} text={'Enviar'} />

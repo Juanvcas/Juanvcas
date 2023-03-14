@@ -1,8 +1,13 @@
+import { appWithI18Next, useSyncLanguage } from 'ni18n';
+import { ni18nConfig } from '../../ni18n.config';
 import { AppProvider } from '@/context/AppContext';
 import MainTemplate from '@/templates';
 import '@/styles/globals.css';
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
+	const locale =
+		typeof window !== 'undefined' && window.localStorage.getItem('P-JV_LANG');
+	useSyncLanguage(locale || 'es');
 	return (
 		<AppProvider>
 			<MainTemplate>
@@ -11,3 +16,5 @@ export default function App({ Component, pageProps }) {
 		</AppProvider>
 	);
 }
+
+export default appWithI18Next(App, ni18nConfig);

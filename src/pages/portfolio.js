@@ -1,10 +1,15 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import { AppContext } from '@/context/AppContext';
+import { useContext } from 'react';
 import { Filters } from '@/components/pages/Portfolio/Filters';
-import s from '@/styles/Portfolio.module.css';
 import { ProjectsList } from '@/components/global/ProjectsList';
+import { ProjectSlide } from '@/components/global/ProjectSlide';
+import s from '@/styles/Portfolio.module.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Portfolio() {
+	const { t } = useTranslation('portfolio');
+	const { projects } = useContext(AppContext);
 	return (
 		<>
 			<Head>
@@ -17,21 +22,8 @@ export default function Portfolio() {
 			<main className={s.main}>
 				<section className={`${s.main_banner} display-limit`}>
 					<div className={s.banner_title}>
-						<h1>Proyectos web</h1>
-						<p>
-							Aquí puedes encontrar mis proyectos mas recientes de todo tipo.
-						</p>
-					</div>
-					<div className={s.banner_image}>
-						<figure>
-							<Image
-								src={
-									'https://i.postimg.cc/kX9ptNQx/3b95d8c378005109e60f93b00a244f59.gif'
-								}
-								alt={'proyectos'}
-								fill
-							/>
-						</figure>
+						<h1>{t('title')}</h1>
+						<p>{t('titleText')}</p>
 					</div>
 				</section>
 				<span className={'separator2'}></span>
@@ -39,7 +31,11 @@ export default function Portfolio() {
 					<Filters s={s} />
 				</section> */}
 				<section className={`${s.main_projects} display-limit`}>
-					<ProjectsList style={s.projects_list} />
+					<ProjectsList style={s.projects_list}>
+						{projects.map((project) => (
+							<ProjectSlide key={project.id} project={project} />
+						))}
+					</ProjectsList>
 				</section>
 			</main>
 		</>
