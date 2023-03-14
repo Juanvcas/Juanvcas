@@ -8,9 +8,10 @@ import { SlGlobe } from 'react-icons/sl';
 import s from '@/styles/components/global/Header.module.css';
 
 export const Header = () => {
+	const { lang, setLang } = useContext(AppContext);
+
 	const [nav, setNav] = useState(true);
 	const [button, setButton] = useState(false);
-	const { lang, setLang } = useContext(AppContext);
 
 	const { i18n } = useTranslation();
 
@@ -71,7 +72,7 @@ export const Header = () => {
 					)}
 					<div className={s.main_lang} onClick={() => changeLanguage(i18n)}>
 						<SlGlobe />
-						{lang.toUpperCase()}
+						{lang.length > 0 && lang.toUpperCase()}
 					</div>
 				</div>
 			</section>

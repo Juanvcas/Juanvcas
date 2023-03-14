@@ -51,8 +51,8 @@ export const ProjectModal = () => {
 					</div>
 					<div>
 						<h3>Tecnoligías:</h3>
-						{project.technologies.map((tech) => (
-							<p>{tech.title}</p>
+						{project.technologies.map((tech, index) => (
+							<p key={index}>{tech.title}</p>
 						))}
 					</div>
 					<div>

@@ -6,7 +6,7 @@ import { Footer } from '@/components/global/Footer';
 import { ProjectModal } from '@/components/modals/ProjectModal';
 
 const MainTemplate = ({ children }) => {
-	const { projectModal, setProjecModal } = useContext(AppContext);
+	const { projectModal } = useContext(AppContext);
 	return (
 		<>
 			<Head>

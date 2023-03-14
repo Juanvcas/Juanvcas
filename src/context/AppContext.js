@@ -1,11 +1,9 @@
 import { createContext, useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { useFetch } from '@/hooks/useFectch';
 
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-	const { i18n } = useTranslation();
 	const [lang, setLang] = useState('');
 
 	const [projects, setProjects] = useState([]);

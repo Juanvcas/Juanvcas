@@ -12,6 +12,5 @@ export const useFetch = async (API, setState, render) => {
 			}
 		};
 		fetchData();
-		console.log('render');
 	}, [render]);
 };
