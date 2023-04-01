@@ -41,7 +41,7 @@ export const Header = () => {
 			setNav(false);
 		}
 
-		window.addEventListener('resize', () => {
+		const resize = () => {
 			if (window.innerWidth > 768) {
 				setButton(false);
 				setNav(true);
@@ -49,13 +49,22 @@ export const Header = () => {
 				setButton(true);
 				setNav(false);
 			}
-		});
+		};
 
-		document.body.addEventListener('click', () => {
+		const closeNav = () => {
 			if (window.innerWidth <= 768) {
 				setNav(false);
 			}
-		});
+		};
+
+		window.addEventListener('resize', resize);
+
+		document.body.addEventListener('click', closeNav);
+
+		return () => {
+			window.removeEventListener('resize', resize);
+			document.body.removeEventListener('click', closeNav);
+		};
 	}, []);
 	return (
 		<header className={s.main}>

@@ -4,7 +4,7 @@ import { useFetch } from '@/hooks/useFectch';
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-	const [lang, setLang] = useState('');
+	const [lang, setLang] = useState('es');
 
 	const [projects, setProjects] = useState([]);
 
