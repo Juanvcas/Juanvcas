@@ -1,4 +1,9 @@
-import { DiJavascript1, DiReact, DiNodejsSmall } from 'react-icons/di';
+import {
+	DiJavascript1,
+	DiReact,
+	DiNodejsSmall,
+	DiPostgresql,
+} from 'react-icons/di';
 import { TbBrandNextjs } from 'react-icons/tb';
 import { SiExpress } from 'react-icons/si';
 import s from '@/styles/components/Home/TechSlider.module.css';
@@ -20,6 +25,9 @@ export const TechSlider = () => {
 			</li>
 			<li>
 				<SiExpress /> | Express.js
+			</li>
+			<li>
+				<DiPostgresql /> | PostgreSQL
 			</li>
 		</ul>
 	);

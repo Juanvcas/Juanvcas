@@ -1,7 +1,7 @@
 import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
 import { ContactForm } from '@/components/pages/Contact/ContactForm';
 import s from '@/styles/Contact.module.css';
-import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
 	const { t } = useTranslation('contact');

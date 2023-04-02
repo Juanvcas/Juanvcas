@@ -1,11 +1,11 @@
 import Head from 'next/head';
+import { useTranslation } from 'react-i18next';
 import { AppContext } from '@/context/AppContext';
 import { useContext } from 'react';
 import { Filters } from '@/components/pages/Portfolio/Filters';
 import { ProjectsList } from '@/components/global/ProjectsList';
 import { ProjectSlide } from '@/components/global/ProjectSlide';
 import s from '@/styles/Portfolio.module.css';
-import { useTranslation } from 'react-i18next';
 
 export default function Portfolio() {
 	const { t } = useTranslation('portfolio');

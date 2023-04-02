@@ -1,11 +1,14 @@
 import Image from 'next/image';
 import { useContext, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { AppContext } from '@/context/AppContext';
 import { MainLinkButton } from '../common/Buttons';
 import { FiChevronRight, FiChevronLeft, FiX } from 'react-icons/fi';
 import s from '@/styles/components/modals/ProjectModal.module.css';
 
 export const ProjectModal = () => {
+	const { t } = useTranslation('projectModal');
+
 	const { setProjectModal, projectModalValue } = useContext(AppContext);
 	const [project] = useState(projectModalValue);
 
@@ -22,12 +25,16 @@ export const ProjectModal = () => {
 				<FiX onClick={() => setProjectModal(false)} />
 				<section className={s.main_content}>
 					<figure className={s.content_image}>
-						<span onClick={previus}>
-							<FiChevronLeft />
-						</span>
-						<span onClick={next}>
-							<FiChevronRight />
-						</span>
+						{project.images.length > 1 ? (
+							<>
+								<span onClick={previus}>
+									<FiChevronLeft />
+								</span>
+								<span onClick={next}>
+									<FiChevronRight />
+								</span>
+							</>
+						) : null}
 						<div className={s['image-cont']}>
 							{project.images.map((img, index) => (
 								<>
@@ -46,22 +53,22 @@ export const ProjectModal = () => {
 				</section>
 				<section className={s.main_info}>
 					<div>
-						<h3>Descripción corta:</h3>
+						<h3>{t('shortDesc')}:</h3>
 						<p>{project.short_description}</p>
 					</div>
 					<div>
-						<h3>Tecnoligías:</h3>
+						<h3>{t('tech')}:</h3>
 						{project.technologies.map((tech, index) => (
 							<p key={index}>{tech.title}</p>
 						))}
 					</div>
 					<div>
-						<h3>Repositorio:</h3>
+						<h3>{t('repo')}:</h3>
 						<p>Hosting: {project.repository.hosting}</p>
 						<MainLinkButton
 							href={project.repository.url}
 							title={'GitHub'}
-							text={'Ir al link'}
+							text={t('link')}
 							target={'_blank'}
 						/>
 					</div>
